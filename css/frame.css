@@ -412,6 +412,18 @@ ol.publication.O-list li p:before {
   content: "[O"counter(O-counter)"]";
 }
 
+ol.publication.S-list {
+  counter-reset: S-counter;
+}
+
+ol.publication.S-list li p {
+  counter-increment: S-counter;
+}
+
+ol.publication.S-list li p:before {
+  content: "[S"counter(S-counter)"]";
+}
+
 ol.publication.P-list {
   counter-reset: P-counter;
 }
