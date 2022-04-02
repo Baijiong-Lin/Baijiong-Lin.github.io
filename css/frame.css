@@ -376,6 +376,18 @@ ol.publication.C-list li p:before {
   content: "[C"counter(C-counter)"]";
 }
 
+ol.publication.E-list {
+  counter-reset: E-counter;
+}
+
+ol.publication.E-list li p {
+  counter-increment: E-counter;
+}
+
+ol.publication.E-list li p:before {
+  content: "[E"counter(E-counter)"]";
+}
+
 ol.publication.J-list {
   counter-reset: J-counter;
 }
