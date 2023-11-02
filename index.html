@@ -1,297 +1,435 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Baijiong Lin's Homepage">
 
-<head>
-  <title>Baijiong Lin's HomePage</title>
-  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-  <script src="js/jquery.min.js"></script>
-  <script src="js/menu.js"></script>
-  <style>
-    .menu-index {
-      color: rgb(255, 255, 255) !important;
-      opacity: 1 !important;
-      font-weight: 700 !important;
+
+<title>Baijiong Lin's Homepage</title>
+
+
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/all.min.css">
+<link rel="stylesheet" href="./css/academicons.min.css">
+<link rel="stylesheet" href="./css/charts.min.css">
+<link id="theme-style" rel="stylesheet" href="./css/main.css">
+
+<!-- <link rel="icon" type="image/png" href="./images/favicon.png"> -->
+
+<script type="module" src="./css/background_star.js"></script>
+
+<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style>
+
+<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
+</style>
+
+<style>.crx_bdwk_down_wrap {
+    top: 70%;
+    left: 0;
+    position: fixed;
+    z-index: 99999999;
+    color: #fff;
+    user-select: none;
+}
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
+        background-color: #666;
+        cursor: wait;
+        width: 126px;
+        text-align: center;
+        padding: 16px 0;
     }
-  </style>
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
+            font-size: 14px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
+            font-size: 10px;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
+        width: 126px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #dd5a57;
+        position: relative;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        background-color: #666;
+        font-size: 12px;
+    }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
+            position: relative;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
+                content: ' ';
+                height: 12px;
+                width: 1px;
+                background-color: #eee;
+                position: absolute;
+                top: 10px;
+                right: 0;
+                transform: scaleX(0.5);
+            }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
+                    display: none;
+                }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
+            flex: 1;
+            color: #dd5a57;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
+            flex: 1;
+            padding: 8px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: lighter;
+        }
+</style>
 </head>
 
 <body>
-  <div class="menu-container">
-    <div class="menu">
-      <div class="menu-table flex-row-space-between fixed-top">
-        <div class="logo flex-row-center">
-          <a href="index.html">Baijiong Lin</a>
-        </div>
-        <div class="menu-items flex-row-center flex-item">
-          <nav>
-            <a href="#biography">Biography</a>
-            <a href="#experiences">Experiences</a>
-            <a href="#softwares">Softwares</a>
-            <a href="#awards">Awards</a> <br>
-            <a href="#education">Education</a> 
-            <a href="#publications">Publications</a> 
-            <a href="#services">Services</a> 
-            <a href="#contact">&nbsp;&nbsp;&nbsp;Contact</a> 
-          </nav>
-        </div>
-      </div>
+<div class="wrapper">
+<section class="section intro-section">
+    <div class="avatar-container">
+        <img class="avatar" src="./images/1.jpg" alt="Baijiong Lin avatar">
     </div>
-  </div>
-
-  <div class="content-container">
-    <div class="content">
-      <div class="content-table flex-column">
-        <!--Start Intro-->
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <img class="image" src="img/3.jpg">
-          </div>
-          <div class="flex-item flex-column">
-            <h2>Baijiong Lin (林百炅)</h2>
-            <hr>
-            <p class="text">
-            	Ph.D. Student<br>
-              blin241 (at) connect.hkust-gz.edu.cn <br>
-            	bj.lin.email (at) gmail.com <br>
-            	<a href="http://ait.hkust-gz.edu.cn/">Thrust of Artificial Intelligence</a>, <a href="https://infh.hkust-gz.edu.cn/">Information Hub</a>,<br>
-				      <a href="https://hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>,<br>
-				      Guangzhou, China<br>
-              <!-- <a href="mailto:bj.lin.email@gmail.com"><img src="img/email.svg" width="18" height="18"> Email</a><br>
-              <a href="https://github.com/baijiong-lin" target="_blank"><img src="img/github.svg" width="18" height="18"> Github</a><br>
-              <a href="https://space.bilibili.com/189684044?from=search&seid=538043439727321652" target="_blank"><img src="img/bilibili.svg" width="18" height="18"> bilibili</a><br>
-            	<img src="img/location.svg" width="18" height="18"> Shenzhen, China<br> -->
-            </p>
-          </div>
+    <div class="intro-container">
+        <div class="header">
+            <h2 class="name">Baijiong Lin (林百炅)</h2>
+            <h3 class="title">Ph.D. Student @ HKUST(GZ)</h3>
+            blin241 (at) connect.hkust-gz.edu.cn <br>
+            bj.lin.email (at) gmail.com <br><br>
         </div>
-        <section id="biography" class="main">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-          	<h2 class="add-top-margin">Biography</h2>
-          	<hr>
-            <p class="text add-top-margin">
-              <!--I'm Baijiong Lin, a research assistant from Department of Computer Science and Engineering, Southern University of Science and Technology (SUSTech), working closely with <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a>. Before coming to SUSTech, I received my Bachelor degree in Information and Computing Science in 2020 from School of Mathematical Sciences at <a href="http://english.scnu.edu.cn/">South China Normal University (SCNU)</a>, where I focused on <b>Gravitational Wave Data Analysis Based on Deep Learning</b> and supervised by <a href="http://www.scholat.com/xrli" target="_blank">Prof. Xiangru Li</a>.-->
-              I'm Baijiong Lin, a Ph.D. student in <a href="https://hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou) (HKUST(GZ))</a>, supervised by <a href="https://www.yingcong.me/">Prof. Yingcong Chen</a>. Before that, I had a great time at <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology (SUSTech)</a>, working as a research assistant in Median Group led by <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a>. I received my Bachelor degree from School of Mathematical Sciences, <a href="http://english.scnu.edu.cn/">South China Normal University (SCNU)</a> in Jun. 2020.
-              <br><br>
-              I am interested in <b>the foundation of machine learning</b> including <b>multi-task learning, meta learning, and transfer learning</b> and their industrial applications.
-              <br><br>
-      	      <a href="https://scholar.google.com/citations?user=KVdbYTYAAAAJ">Google Scholar</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-      	      <a href="https://www.semanticscholar.org/author/Baijiong-Lin/1382253771">Semantic Scholar</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-      	      <a href="https://dblp.org/pid/279/2950.html">DBLP</a>
-	  </div>
+        <div class="contact">
+            <a class="link" href="https://github.com/Baijiong-Lin" target="_blank">GitHub</a>
+                &nbsp/&nbsp
+            <a class="link" href="https://scholar.google.com/citations?user=KVdbYTYAAAAJ" target="_blank">Google Scholar</a>
+                &nbsp/&nbsp
+            <a class="link" href="https://www.semanticscholar.org/author/Baijiong-Lin/1382253771" target="_blank">Semantic Scholar</a>
+                &nbsp/&nbsp
+            <a class="link" href="https://dblp.org/pid/279/2950.html" target="_blank">DBLP</a>
         </div>
-        <!--End Intro-->
-
-        <!--Start Education-->
-        <section id="education" class="main">
-        <div class="">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin">Education</h2>
-            <hr>
-            <li>Ph.D. in Artificial Intelligence, The Hong Kong University of Science and Technology (Guangzhou), Sep. 2022 - Present. </li>
-            <li>Bachelor’s in Information and Computing Science, South China Normal University, Sep. 2016 - Jun. 2020. </li>
-          </div>
-        </div>
-        <!--End Education-->
-
-        <!--Start Experiences-->
-        <section id="experiences" class="main">
-        <div class="">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin">Experiences</h2>
-            <hr>
-            <ol class="publication E-list">
-            <li><p class="text-small-margin">Research Intern, South China Normal University, supervised by <a href="http://www.scholat.com/xrli" target="_blank">Prof. Xiangru Li</a>, Mar. 2017 - Jan. 2020. <br>
-            &emsp;&emsp;Topic: Gravitational Wave Data Analysis Based on Deep Learning.
-            </p>
-            </li>
-            <li><p class="text-small-margin">Research Assistant, Southern University of Science and Technology, working closely with <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a>, Jul. 2020 - Mar. 2022. <br>
-            &emsp;&emsp;Topic: Multi-task learning, meta learning, and transfer learning. 
-            </p>
-            </li>
-            <li><p class="text-small-margin">Research Intern, SmartMore Corporation Limited, Apr. 2022 - Sep. 2022. <br>
-              &emsp;&emsp;Topic: Hyperparameter Optimization.
-            </p></li>
-            </ol>
-          </div>
-        </div>
-        <!--End Experiences-->
-
-    <!--Start publication-->
-    <section id="publications" class="main">
-    <div class="flex-row">
-    <div class="flex-item flex-column">
-    <h2 class="add-top-margin">Publications</h2> 
-    <hr>
-    <p>(*: equal contribution)</p>
-    <h3 class="add-top-margin">Journal Papers</h3> 
-    <ol class="publication J-list">
-
-    <li><p class="text-small-margin">
-    <b>Baijiong Lin</b>, Xiangru Li, and Woliang Yu. Binary Neutron Stars Gravitational Wave Detection Based on Wavelet Packet Analysis And Convolutional Neural Networks. <i>Frontiers of Physics</i>. 15(2), 24602, 2020. &nbsp;&nbsp; <a href="file/fop2020.pdf">Paper</a>
-		</p></li>
-
-    <li><p class="text-small-margin">
-    <b>Baijiong Lin</b>, Feiyang Ye, Yu Zhang, and Ivor W. Tsang. Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning. <i>Transactions on Machine Learning Research</i> (<b>TMLR</b>), 2022. &nbsp;&nbsp; <a href="file/tmlr2022.pdf">Paper</a>
-    </p></li>
-
-    <li><p class="text-small-margin">
-    <b>Baijiong Lin</b> and Yu Zhang. LibMTL: A Python Library for Multi-Task Learning. <i>Journal of Machine Learning Research</i> (<b>JMLR</b>), 24(209):1–7, 2023. &nbsp;&nbsp; <a href="file/jmlr2023.pdf">Paper</a>
-    </p></li>
-
-    </ol>
-
-    <h3 class="add-top-margin">Conference Papers</h3> 
-    <ol class="publication C-list">
-
-    <li><p class="text-small-margin">
-    Feiyang Ye*, <b>Baijiong Lin*</b>, Zhixiong Yue, Pengxin Guo, Qiao Xiao, and Yu Zhang. Multi-Objective Meta Learning. In <i>Neural Information Processing Systems</i> (<b>NeurIPS</b>), 2021. &nbsp;&nbsp; <a href="file/neurips2021.pdf">Paper</a>
-    &nbsp;&nbsp;|&nbsp;&nbsp; <a href="file/neurips2021_supp.pdf">Supplemental</a>
-    &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://github.com/Baijiong-Lin/MOML">Code</a>
-    </p></li>
-
-	  <li><p class="text-small-margin">
-	  Zhixiong Yue, <b>Baijiong Lin</b>, Yu Zhang, and Christy Liang. Effective, Efficient and Robust Neural Architecture Search. In <i>International Joint Conference on Neural Networks</i> (<b>IJCNN</b>), 2022. &nbsp;&nbsp; <a href="file/ijcnn2022.pdf">Paper</a>
-	  </p></li>
-            
-    </ol>
-            
-    <h3 class="add-top-margin">Preprints</h3> 
-    <ol class="publication P-list">
-            
-    <li><p class="text-small-margin">
-    Xiyu Wang, <b>Baijiong Lin</b>, Daochang Liu, and Chang Xu. Efficient Transfer Learning in Diffusion Models via Adversarial Noise. <a href="https://arxiv.org/abs/2308.11948">arXiv:2308.11948</a>, 2023.
-    </p></li>
-
-    <li><p class="text-small-margin">
-    <b>Baijiong Lin</b>, Weisen Jiang, Feiyang Ye, Yu Zhang, Pengguang Chen, Ying-Cong Chen, Shu Liu, and James T. Kwok. Dual-Balancing for Multi-Task Learning. <a href="https://arxiv.org/abs/2308.12029v2">arXiv:2308.12029v2</a>, 2023.
-    </p></li>
-
-    <li><p class="text-small-margin">
-    Weisen Jiang*, <b>Baijiong Lin*</b>, Han Shi, Yu Zhang, Zhenguo Li, and James T. Kwok. Effective and Parameter-Efficient Reusing Fine-Tuned Models. <a href="https://arxiv.org/abs/2310.01886v2">arXiv:2310.01886v2</a>, 2023.
-    </p></li>
-
-    </ol>
     </div>
+</section>
+
+<!-- Introduction -->
+<section class="section profile-section">
+    <div class="section-title">
+        About Me
     </div>
-    <!--End publication-->
-	      
-    <!--Start Software-->
-    <section id="softwares" class="main">
-    <div class="">
-    <div class="flex-item flex-column">
-    <h2 class="add-top-margin">Softwares</h2>
-    <hr>
-    <ol class="publication S-list">
+    <div class="details">
+        <p> I am currently a second-year Ph.D. student in <a href="http://ait.hkust-gz.edu.cn/">Artificial Intelligence Thrust</a> of <a href="https://hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>, supervised by <a href="https://www.yingcong.me/">Prof. Yingcong Chen</a>. 
+        Before that, I had a great time at <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology</a>, working as a research assistant under the supervision of <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a>. I received my Bachelor degree from School of Mathematical Sciences, <a href="http://english.scnu.edu.cn/">South China Normal University</a> in Jun. 2020.
+        My research interests include Machine Learning, Artificial Intelligence, and AI4Science, especially in multi-task learning and generative modeling (AIGC).
+        </p>
+    </div>
+</section>
 
-    <li><p class="text-small-margin">
-   	LibMTL: A PyTorch Library for Multi-Task Learning. 
-    &nbsp;&nbsp; <a href="https://github.com/median-research-group/LibMTL">Code</a> 
-    &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://libmtl.readthedocs.io/en/latest/">Docs</a>
-    &nbsp;&nbsp;|&nbsp;&nbsp; <a href="https://jmlr.org/papers/v24/22-0347.html">Paper</a> 
-    <br>
-    &emsp;&emsp; <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/median-research-group/LibMTL?color=red"> 
-    &nbsp;&nbsp; <img alt="GitHub forks" src="https://img.shields.io/github/forks/median-research-group/LibMTL?color=blue"> 
-    &nbsp;&nbsp; <img src="https://img.shields.io/badge/Made%20With-Love-red.svg"> &nbsp;&nbsp;
-    </p></li>
+<!-- News -->
+<section class="section news-section">
+    <div class="section-title">
+        News
+    </div>
+    <!-- <div style="height:200px;overflow-y:auto"> -->
+    <div style="height:auto;overflow-y:auto">
+    <ul>
+    <li> [2023.07] One paper got accepted by JMLR! </li>
+    <li> [2022.10] One paper got accepted by TMLR! </li>
+    <li> [2021.10] One paper got accepted by NeurIPS 2021! </li>
+    </ul></div>
+</section>
 
-    <li><p class="text-small-margin">
-    LoRA-Torch: PyTorch Reimplementation of LoRA. 
-    &nbsp;&nbsp; <a href="https://github.com/Baijiong-Lin/LoRA-Torch">Code</a>
-    <br>
-    &emsp;&emsp; <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Baijiong-Lin/LoRA-Torch?color=red"> 
-    &nbsp;&nbsp; <img alt="GitHub forks" src="https://img.shields.io/github/forks/Baijiong-Lin/LoRA-Torch?color=blue"> 
-    &nbsp;&nbsp; <img src="https://img.shields.io/badge/Made%20With-Love-red.svg"> &nbsp;&nbsp;
-    </p></li>
+<!-- Publications -->
+<section class="section publications-section">
+    <div class="section-title">
+        Publications
+    </div>
+    <p>(* denotes equal contribution)</p>
+    <h5><b>Preprints</b></h5>    
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/PERU.png" alt="PERU.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://arxiv.org/abs/2310.01886v2" target="_blank">Effective and Parameter-Efficient Reusing Fine-Tuned Models</a>
+            </p>
+            <div class="authors"><p>Weisen Jiang*, <strong>Baijiong Lin*</strong>, Han Shi, Yu Zhang, Zhenguo Li, and James T. Kwok.</p></div>
+            <div class="conference"><p><em>arXiv preprint arXiv:2310.01886v2, 2023.</em></p></div>
+            <a class="url" href="https://arxiv.org/abs/2310.01886v2" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/DBMTL.png" alt="DBMTL.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://arxiv.org/abs/2308.12029v2" target="_blank">Dual-Balancing for Multi-Task Learning</a>
+            </p>
+            <div class="authors"><p><strong>Baijiong Lin</strong>, Weisen Jiang, Feiyang Ye, Yu Zhang, Pengguang Chen, Ying-Cong Chen, Shu Liu, and James T. Kwok.</p></div>
+            <div class="conference"><p><em>arXiv preprint arXiv:2308.12029v2, 2023.</em></p></div>
+            <a class="url" href="https://arxiv.org/abs/2308.12029v2" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/TAN.png" alt="TAN.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://arxiv.org/abs/2308.11948" target="_blank">Efficient Transfer Learning in Diffusion Models via Adversarial Noise</a>
+            </p>
+            <div class="authors"><p>Xiyu Wang, <strong>Baijiong Lin</strong>, Daochang Liu, and Chang Xu.</p></div>
+            <div class="conference"><p><em>arXiv preprint arXiv:2308.11948, 2023.</em></p></div>
+            <a class="url" href="https://arxiv.org/abs/2308.11948" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
     
-    </ol>
-    </div>
-    </div>
-    <!--End Software-->
-
-        <!--Start Academic Services-->
-        <section id="services" class="main">
-        <div class="">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin">Academic Services</h2>
-            <hr>
-            Conference Reviewer:
-            <ul>
-              <li>International Conference on Machine Learning (<b>ICML</b>): <a href="https://icml.cc/Conferences/2022/Reviewers">2022</a> </li>
-      	      <li>Neural Information Processing Systems (<b>NeurIPS</b>): <a href="https://neurips.cc/Conferences/2022/ProgramCommittee">2022</a>, 2023 </li>
-              <li>International Conference on Learning Representations (<b>ICLR</b>): 2024 </li>
-      	      <li>SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD</b>): 2023 </li>
-              <li>AAAI Conference on Artificial Intelligence (<b>AAAI</b>): 2023, 2024 </li>
-              <li>ACM International Conference on Multimedia (<b>MM</b>): 2022 </li> 
-              <li>Conference on Uncertainty in Artificial Intelligence (<b>UAI</b>): 2023 </li>
-              <li>European Conference on Artificial Intelligence (<b>ECAI</b>): <a href="https://ecai2023.eu/reviewer">2023</a> </li>
-              <li>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (<b>ECML/PKDD</b>): 2023 </li>
-              <li>British Machine Vision Conference (<b>BMVC</b>): 2023 </li>
-              <li>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>): <a href="http://aistats.org/aistats2023/reviewers.html">2023</a>, 2024 </li>
-              <li>Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD</b>): <a href="https://pakdd2023.org/pc/">2023</a> </li>
-              <li>International Conference on Automated Machine Learning (<b>AutoML</b>): 2023 </li>
-              <li>International Joint Conference on Neural Networks (<b>IJCNN</b>): 2022 </li>
-            </ul>
-	    Journal Reviewer:
-	    <ul>
-	    <li>Transactions on Machine Learning Research (<b>TMLR</b>) </li>
-	    </ul>
-          </div>
+    <h5><b>Conference Papers</b></h5>
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/E2RNAS.png" alt="E2RNAS.png">
         </div>
-        <!--End Academic Services-->
-
-        <!--Start Awards and Honors-->
-        <section id="awards" class="main">
-        <div class="flex-row">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin">Awards and Honors</h2>
-            <hr>
-            <ol class="publication A-list">
-              <li>
-                <p class="text-small-margin">
-                Outstanding Undergraduate Thesis Award, 基于深度学习的双中子星引力波信号的探测及其参数估计, South China Normal University, 2020.
-               </p>
-               </li>
-               <li>
-                <p class="text-small-margin">
-    Outstanding Undergraduate Award (about Top 1%), South China Normal University, 2020.
-                </p>
-              </li>
-            </ol>
-          </div>
-        </div>
-        <!--End Awards and Honors-->
-
-        <!--Start Contact-->
-        <section id="contact" class="main">
-        <div class="">
-          <div class="flex-item flex-column">
-            <h2 class="add-top-margin">Contact</h2>
-            <hr>
-            <h4 class="add-top-margin">bj.lin.email (at) gmail.com</h4>
-            <li>outdated email address: linbj (at) mail.sustech.edu.cn</li> <br><br>
-          </div>
-        </div>
-        <!--End Contact-->
-	      
-        <!--Start Copyright-->
-      	<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
-        <div class="flex-row">
-          <div class="flex-item flex-item-stretch flex-column">
-            <p class="text text-small text-italic">
-              Copyright &copy;  2019-2023 Baijiong Lin. Many thanks to the development by <a href="https://github.com/yenchiah/project-website-template">Yen-Chia Hsu</a>. Last updated: Oct 07, 2023.
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://ieeexplore.ieee.org/document/9892654" target="_blank">Effective, Efficient and Robust Neural Architecture Search</a>
             </p>
-          </div>
+            <div class="authors"><p>Zhixiong Yue, <strong>Baijiong Lin</strong>, Yu Zhang, and Christy Liang.</p></div>
+            <div class="conference"><p><em>International Joint Conference on Neural Networks (<b>IJCNN</b>), 2022 (<span style="color:red"><b>oral</b></span>).</em></p></div>
+            <a class="url" href="files/ijcnn2022.pdf" target="_blank">[PDF]</a>
         </div>
-        <!--End Copyright-->
-      </div>
     </div>
-  </div>
-</body>
 
-</html>
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/moml.png" alt="moml.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://proceedings.neurips.cc/paper/2021/hash/b23975176653284f1f7356ba5539cfcb-Abstract.html" target="_blank">Multi-Objective Meta Learning</a>
+            </p>
+            <div class="authors"><p>Feiyang Ye*, <strong>Baijiong Lin*</strong>, Zhixiong Yue, Pengxin Guo, Qiao Xiao, and Yu Zhang.</p></div>
+            <div class="conference"><p><em>Neural Information Processing Systems (<b>NeurIPS</b>), 2021.</em></p></div>
+            <a class="url" href="files/neurips2021.pdf" target="_blank">[PDF]</a>
+            <a class="url" href="files/neurips2021_supp.pdf" target="_blank">[Supplemental]</a>
+            <a class="url" href="https://github.com/Baijiong-Lin/MOML" target="_blank">[Code]</a>
+        </div>
+    </div>
+    
+
+    <h5><b>Journal Papers</b></h5>
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/LibMTL.png" alt="LibMTL.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://jmlr.org/papers/v24/22-0347.html" target="_blank">LibMTL: A Python Library for Multi-Task Learning</a>
+            </p>
+            <div class="authors"><p><strong>Baijiong Lin</strong> and Yu Zhang.</p></div>
+            <div class="conference"><p><em>Machine Learning Open Source Software, Journal of Machine Learning Research (<b>JMLR</b>), 2023.</em></p></div>
+            <a class="url" href="files/jmlr2023.pdf" target="_blank">[PDF]</a>
+            <a class="url" href="https://github.com/median-research-group/LibMTL" target="_blank">[Code]</a>
+            <a href="https://libmtl.readthedocs.io/en/latest/">[Docs]</a>
+            <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/median-research-group/LibMTL?color=red">
+            <img alt="GitHub forks" src="https://img.shields.io/github/forks/median-research-group/LibMTL?color=blue">
+            <img src="https://img.shields.io/badge/Made%20With-Love-red.svg">
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/RLW.png" alt="RLW.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://openreview.net/forum?id=jjtFD8A1Wx" target="_blank">Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning</a>
+            </p>
+            <div class="authors"><p><strong>Baijiong Lin</strong>, Feiyang Ye, Yu Zhang, and Ivor W. Tsang.</p></div>
+            <div class="conference"><p><em>Transactions on Machine Learning Research (<b>TMLR</b>), 2022.</em></p></div>
+            <a class="url" href="files/tmlr2022.pdf" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
+    <div class="publication-container">
+        <div class="teaser-container">
+            <img class="teaser" src="./images/pub/fop.png" alt="fop.png">
+        </div>
+        <div class="info-container">
+            <p class="title">
+                <a class="title_link" href="https://link.springer.com/article/10.1007/s11467-019-0935-y" target="_blank">Binary Neutron Stars Gravitational Wave Detection Based on Wavelet Packet Analysis And Convolutional Neural Networks</a>
+            </p>
+            <div class="authors"><p><strong>Baijiong Lin</strong>, Xiangru Li, and Woliang Yu.</p></div>
+            <div class="conference"><p><em>Frontiers of Physics (<b>FOP</b>), 2020.</em></p></div>
+            <a class="url" href="files/fop2020.pdf" target="_blank">[PDF]</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Educations -->
+<section class="section experiences-section">
+    <div class="section-title">
+        Educations
+    </div>
+    <div class="item">
+
+        <div class="upper-row">
+            <div class="school">
+                Ph.D. in Artificial Intelligence, The Hong Kong University of Science and Technology (Guangzhou)
+            </div>
+            <div class="time">Sep. 2022 - Present</div>
+        </div>
+
+        <div class="upper-row">
+            <div class="school">
+                Bachelor’s in Information and Computing Science, South China Normal University
+            </div>
+            <div class="time">Sep. 2016 - Jun. 2020</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Experiences -->
+<section class="section experiences-section">
+    <div class="section-title">
+        Experiences
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="company">
+                SmartMore Corporation Limited
+            </div>
+            <div class="location"> Shenzhen, China</div>
+            <div class="time">Apr. 2022 - Sep. 2022</div>
+        </div>
+        <div class="below-row">
+            <div class="role">Research Intern, supervised by <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ" target="_blank">Dr. Pengguang Chen</a> and <a href="http://shuliu.me/" target="_blank">Dr. Shu Liu</a></div>
+            <div class="role">Topic: hyperparameter optimization. </div>
+        </div>
+
+        <div class="upper-row">
+            <div class="company">
+                 Southern University of Science and Technology
+            </div>
+            <div class="location">Shenzhen, China</div>
+            <div class="time">Jul. 2020 - Mar. 2022</div>
+        </div>
+        <div class="below-row">
+            <div class="role">Research Assistant, supervised by <a href="https://cse.sustech.edu.cn/faculty/~zhangy/" target="_blank">Prof. Yu Zhang</a></div>
+            <div class="role">Topic: multi-task learning, meta learning, and transfer learning. </div>
+        </div>
+
+        <div class="upper-row">
+            <div class="company">
+                 South China Normal University
+            </div>
+            <div class="location">Guangzhou, China</div>
+            <div class="time">Mar. 2017 - Jan. 2020</div>
+        </div>
+        <div class="below-row">
+            <div class="role">Research Intern, supervised by <a href="http://www.scholat.com/xrli" target="_blank">Prof. Xiangru Li</a></div>
+            <div class="role">Topic: gravitational wave data analysis based on deep learning. </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="section awards-section">
+    <div class="section-title">
+        Services
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+            Conference Reviewer:
+                <ul>
+                  <li>International Conference on Machine Learning (<b>ICML</b>): <a href="https://icml.cc/Conferences/2022/Reviewers">2022</a> </li>
+                  <li>Neural Information Processing Systems (<b>NeurIPS</b>): <a href="https://neurips.cc/Conferences/2022/ProgramCommittee">2022</a>, 2023 </li>
+                  <li>International Conference on Learning Representations (<b>ICLR</b>): 2024 </li>
+                  <li>SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD</b>): 2023 </li>
+                  <li>AAAI Conference on Artificial Intelligence (<b>AAAI</b>): 2023, 2024 </li>
+                  <li>ACM International Conference on Multimedia (<b>MM</b>): 2022 </li> 
+                  <li>Conference on Uncertainty in Artificial Intelligence (<b>UAI</b>): 2023 </li>
+                  <li>European Conference on Artificial Intelligence (<b>ECAI</b>): <a href="https://ecai2023.eu/reviewer">2023</a> </li>
+                  <li>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (<b>ECML/PKDD</b>): 2023 </li>
+                  <li>British Machine Vision Conference (<b>BMVC</b>): 2023 </li>
+                  <li>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>): <a href="http://aistats.org/aistats2023/reviewers.html">2023</a>, 2024 </li>
+                  <li>Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD</b>): <a href="https://pakdd2023.org/pc/">2023</a> </li>
+                  <li>International Conference on Automated Machine Learning (<b>AutoML</b>): 2023 </li>
+                  <li>International Joint Conference on Neural Networks (<b>IJCNN</b>): 2022 </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                Journal Reviewer: Transactions on Machine Learning Research (<b>TMLR</b>)
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Awards -->
+<section class="section awards-section">
+    <div class="section-title">
+        Awards
+    </div>
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Outstanding Undergraduate Thesis Award, South China Normal University</p>
+            </div>
+            <div class="time">2020</div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="upper-row">
+            <div class="name">
+                <p>Outstanding Undergraduate Award (about Top 1%), South China Normal University</p>
+            </div>
+            <div class="time">2020</div>
+        </div>
+    </div>
+</section>
+
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
+
+<footer class="footer">
+    <div class="text-center">
+        <small id="copyright">
+            Copyright &copy; Baijiong Lin. The website template was borrowed from &nbsp;<a href="https://kaichen1998.github.io/">Kai Chen</a>. Last updated: Nov 02, 2023.
+        </small>
+    </div>
+</footer>
+
+
+</body></html>
