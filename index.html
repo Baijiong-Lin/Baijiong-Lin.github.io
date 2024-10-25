@@ -1,527 +1,984 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Baijiong Lin's Homepage">
+<!doctype html>
+<html lang="en">
 
+<head>
 
-<title>Baijiong Lin's Homepage</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
+  <meta name="description" content="Baijiong Lin is a Ph.D. student at HKUST(GZ).">
+  <meta name="author" content="Baijiong Lin">
+  <meta name="keywords" content="Baijiong Lin,Baijiong,Lin,Computer,Vision,Deep,Machine,Learning,AI,HKUST,HKUST(GZ),HKUST(Guangzhou)">
 
-<link rel="stylesheet" href="./css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/all.min.css">
-<link rel="stylesheet" href="./css/academicons.min.css">
-<link rel="stylesheet" href="./css/charts.min.css">
-<link id="theme-style" rel="stylesheet" href="./css/main.css">
+  <title>Baijiong Lin</title>
 
-<!-- <link rel="icon" type="image/png" href="./images/favicon.png"> -->
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon.ico" rel=icon>
 
-<script type="module" src="./css/background_star.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
-</style>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<style type="text/css">.dg ul{list-style:none;margin:0;padding:0;width:100%;clear:both}.dg.ac{position:fixed;top:0;left:0;right:0;height:0;z-index:0}.dg:not(.ac) .main{overflow:hidden}.dg.main{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear}.dg.main.taller-than-window{overflow-y:auto}.dg.main.taller-than-window .close-button{opacity:1;margin-top:-1px;border-top:1px solid #2c2c2c}.dg.main ul.closed .close-button{opacity:1 !important}.dg.main:hover .close-button,.dg.main .close-button.drag{opacity:1}.dg.main .close-button{-webkit-transition:opacity .1s linear;-o-transition:opacity .1s linear;-moz-transition:opacity .1s linear;transition:opacity .1s linear;border:0;line-height:19px;height:20px;cursor:pointer;text-align:center;background-color:#000}.dg.main .close-button.close-top{position:relative}.dg.main .close-button.close-bottom{position:absolute}.dg.main .close-button:hover{background-color:#111}.dg.a{float:right;margin-right:15px;overflow-y:visible}.dg.a.has-save>ul.close-top{margin-top:0}.dg.a.has-save>ul.close-bottom{margin-top:27px}.dg.a.has-save>ul.closed{margin-top:0}.dg.a .save-row{top:0;z-index:1002}.dg.a .save-row.close-top{position:relative}.dg.a .save-row.close-bottom{position:fixed}.dg li{-webkit-transition:height .1s ease-out;-o-transition:height .1s ease-out;-moz-transition:height .1s ease-out;transition:height .1s ease-out;-webkit-transition:overflow .1s linear;-o-transition:overflow .1s linear;-moz-transition:overflow .1s linear;transition:overflow .1s linear}.dg li:not(.folder){cursor:auto;height:27px;line-height:27px;padding:0 4px 0 5px}.dg li.folder{padding:0;border-left:4px solid rgba(0,0,0,0)}.dg li.title{cursor:pointer;margin-left:-4px}.dg .closed li:not(.title),.dg .closed ul li,.dg .closed ul li>*{height:0;overflow:hidden;border:0}.dg .cr{clear:both;padding-left:3px;height:27px;overflow:hidden}.dg .property-name{cursor:default;float:left;clear:left;width:40%;overflow:hidden;text-overflow:ellipsis}.dg .c{float:left;width:60%;position:relative}.dg .c input[type=text]{border:0;margin-top:4px;padding:3px;width:100%;float:right}.dg .has-slider input[type=text]{width:30%;margin-left:0}.dg .slider{float:left;width:66%;margin-left:-5px;margin-right:0;height:19px;margin-top:4px}.dg .slider-fg{height:100%}.dg .c input[type=checkbox]{margin-top:7px}.dg .c select{margin-top:5px}.dg .cr.function,.dg .cr.function .property-name,.dg .cr.function *,.dg .cr.boolean,.dg .cr.boolean *{cursor:pointer}.dg .cr.color{overflow:visible}.dg .selector{display:none;position:absolute;margin-left:-9px;margin-top:23px;z-index:10}.dg .c:hover .selector,.dg .selector.drag{display:block}.dg li.save-row{padding:0}.dg li.save-row .button{display:inline-block;padding:0px 6px}.dg.dialogue{background-color:#222;width:460px;padding:15px;font-size:13px;line-height:15px}#dg-new-constructor{padding:10px;color:#222;font-family:Monaco, monospace;font-size:10px;border:0;resize:none;box-shadow:inset 1px 1px 1px #888;word-wrap:break-word;margin:12px 0;display:block;width:440px;overflow-y:scroll;height:100px;position:relative}#dg-local-explain{display:none;font-size:11px;line-height:17px;border-radius:3px;background-color:#333;padding:8px;margin-top:10px}#dg-local-explain code{font-size:10px}#dat-gui-save-locally{display:none}.dg{color:#eee;font:11px 'Lucida Grande', sans-serif;text-shadow:0 -1px 0 #111}.dg.main::-webkit-scrollbar{width:5px;background:#1a1a1a}.dg.main::-webkit-scrollbar-corner{height:0;display:none}.dg.main::-webkit-scrollbar-thumb{border-radius:5px;background:#676767}.dg li:not(.folder){background:#1a1a1a;border-bottom:1px solid #2c2c2c}.dg li.save-row{line-height:25px;background:#dad5cb;border:0}.dg li.save-row select{margin-left:5px;width:108px}.dg li.save-row .button{margin-left:5px;margin-top:1px;border-radius:2px;font-size:9px;line-height:7px;padding:4px 4px 5px 4px;background:#c5bdad;color:#fff;text-shadow:0 1px 0 #b0a58f;box-shadow:0 -1px 0 #b0a58f;cursor:pointer}.dg li.save-row .button.gears{background:#c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;height:7px;width:8px}.dg li.save-row .button:hover{background-color:#bab19e;box-shadow:0 -1px 0 #b0a58f}.dg li.folder{border-bottom:0}.dg li.title{padding-left:16px;background:#000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;cursor:pointer;border-bottom:1px solid rgba(255,255,255,0.2)}.dg .closed li.title{background-image:url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==)}.dg .cr.boolean{border-left:3px solid #806787}.dg .cr.color{border-left:3px solid}.dg .cr.function{border-left:3px solid #e61d5f}.dg .cr.number{border-left:3px solid #2FA1D6}.dg .cr.number input[type=text]{color:#2FA1D6}.dg .cr.string{border-left:3px solid #1ed36f}.dg .cr.string input[type=text]{color:#1ed36f}.dg .cr.function:hover,.dg .cr.boolean:hover{background:#111}.dg .c input[type=text]{background:#303030;outline:none}.dg .c input[type=text]:hover{background:#3c3c3c}.dg .c input[type=text]:focus{background:#494949;color:#fff}.dg .c .slider{background:#303030;cursor:ew-resize}.dg .c .slider-fg{background:#2FA1D6;max-width:100%}.dg .c .slider:hover{background:#3c3c3c}.dg .c .slider:hover .slider-fg{background:#44abda}
-</style>
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-<style>.crx_bdwk_down_wrap {
-    top: 70%;
-    left: 0;
-    position: fixed;
-    z-index: 99999999;
-    color: #fff;
-    user-select: none;
-}
+  <!-- My CSS -->
+  <link href="css/style.css" rel="stylesheet">
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading {
-        background-color: #666;
-        cursor: wait;
-        width: 126px;
-        text-align: center;
-        padding: 16px 0;
-    }
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading p {
-            font-size: 14px;
-        }
+  <!-- clipboard.js -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
 
-    .crx_bdwk_down_wrap .crx_bdwk_down_loading small {
-            font-size: 10px;
-        }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_btn {
-        width: 126px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        font-size: 14px;
-        background-color: #dd5a57;
-        position: relative;
-    }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        background-color: #666;
-        font-size: 12px;
-    }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div {
-            position: relative;
-        }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div:after {
-                content: ' ';
-                height: 12px;
-                width: 1px;
-                background-color: #eee;
-                position: absolute;
-                top: 10px;
-                right: 0;
-                transform: scaleX(0.5);
-            }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types div:last-child:after {
-                    display: none;
-                }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types_check {
-            flex: 1;
-            color: #dd5a57;
-            padding: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-    .crx_bdwk_down_wrap .crx_bdwk_down_types_uncheck {
-            flex: 1;
-            padding: 8px;
-            cursor: pointer;
-            color: #fff;
-            font-weight: lighter;
-        }
-</style>
 </head>
 
 <body>
-<div class="wrapper">
-<section class="section intro-section">
-    <div class="avatar-container">
-        <img class="avatar" src="./images/1.jpg" alt="Baijiong Lin avatar">
-    </div>
-    <div class="intro-container">
-        <div class="header">
-            <h2 class="name">Baijiong Lin (林百炅)</h2>
-            <h3 class="title">Ph.D. Student @ HKUST(GZ)</h3>
-            blin241 (at) connect.hkust-gz.edu.cn <br>
-            bj.lin.email (at) gmail.com <br><br>
-        </div>
-        <div class="contact">
-            <a class="link" href="https://github.com/Baijiong-Lin" target="_blank">GitHub</a>
-                &nbsp/&nbsp
-            <a class="link" href="https://scholar.google.com/citations?user=KVdbYTYAAAAJ" target="_blank">Google Scholar</a>
-                &nbsp/&nbsp
-            <a class="link" href="https://www.semanticscholar.org/author/Baijiong-Lin/1382253771" target="_blank">Semantic Scholar</a>
-                &nbsp/&nbsp
-            <a class="link" href="https://dblp.org/pid/279/2950.html" target="_blank">DBLP</a>
-        </div>
-    </div>
-</section>
 
-<!-- Introduction -->
-<section class="section profile-section">
-    <div class="section-title">
-        About Me
-    </div>
-    <div class="details">
-        <p> I am currently a third-year Ph.D. student in <a href="http://ait.hkust-gz.edu.cn/">Artificial Intelligence Thrust</a> of <a href="https://hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>, supervised by <a href="https://www.yingcong.me/">Prof. Yingcong Chen</a>. 
-        Before that, I had a great time at <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology</a>, working as a research assistant under the supervision of <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a>. I received my Bachelor degree from School of Mathematical Sciences, <a href="http://english.scnu.edu.cn/">South China Normal University</a> in Jun. 2020.
-        My research interests include deep learning, machine learning, and AI4Science, especially in multi-task learning and large language models.
-        </p>
-    </div>
-</section>
+  <div class="container-fluid">
 
-<!-- News -->
-<section class="section news-section">
-    <div class="section-title">
-        News
-    </div>
-    <!-- <div style="height:200px;overflow-y:auto"> -->
-    <div style="height:auto;overflow-y:auto">
-    <ul>
-    <li> [2024.07] One paper got accepted by ECCV 2024! </li>
-    <li> [2023.07] One paper got accepted by JMLR! </li>
-    <li> [2022.10] One paper got accepted by TMLR! </li>
-    <li> [2021.10] One paper got accepted by NeurIPS 2021! </li>
-    </ul></div>
-</section>
-
-<!-- Publications -->
-<section class="section publications-section">
-    <div class="section-title">
-        Publications
-    </div>
-    <p>(* denotes equal contribution)</p>
-    
-    <h5><b>Journal Papers</b></h5>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/moml.png" alt="moml.png">
+    <!-- Home -->
+    <div class="sec-wrapper home-wrapper" id="home">
+      <div class="row align-items-center">
+        <div class="col-sm-auto col-wrapper">
+          <div class="picture">
+              <img class="avatar" src="./images/1.jpg" alt="Baijiong Lin avatar">
+          </div>
         </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://doi.org/10.1016/j.artint.2024.104184" target="_blank">Multi-Objective Meta-Learning</a>
-            </p>
-            <div class="authors"><p>Feiyang Ye, <strong>Baijiong Lin</strong>, Zhixiong Yue, Yu Zhang and Ivor W. Tsang.</p></div>
-            <div class="conference"><p><em>Artificial Intelligence</em> (<b>AIJ</b>), 2024. (<span style="color:red"><b>journal extension of MOML</b></span>) </p></div>
-            <a class="url" href="files/aij2024.pdf" target="_blank">[PDF]</a>
-            <a class="url" href="https://github.com/Baijiong-Lin/MOML" target="_blank">[Code]</a>
+        <div class="col-sm col-wrapper">
+          <div class="description">
+            <div class="name">Baijiong Lin</div>
+            <div>Ph.D. Student, HKUST(GZ)</div>
+            <div>blin241 (at) connect.hkust-gz.edu.cn</div>
+            <div>bj.lin.email (at) gmail.com</div>
+            <div class="social">
+              <a class="link" href="https://github.com/Baijiong-Lin" target="_blank">GitHub</a> /
+              <a class="link" href="https://scholar.google.com/citations?user=KVdbYTYAAAAJ" target="_blank">Google Scholar</a> /
+              <a class="link" href="https://www.semanticscholar.org/author/Baijiong-Lin/1382253771" target="_blank">Semantic Scholar</a> /
+              <a class="link" href="https://dblp.org/pid/279/2950.html" target="_blank">DBLP</a> /
+              <a class="link" href="https://openreview.net/profile?id=~Baijiong_Lin1" target="_blank">OpenReview</a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <!-- Home -->
 
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/LibMTL.png" alt="LibMTL.png">
+    <!-- Bio -->
+    <div class="sec-wrapper bio-wrapper" id="bio">
+      <div class="row section-head">
+        <div class="col col-wrapper">
+          <div class="section-title">Biography</div>
         </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://jmlr.org/papers/v24/22-0347.html" target="_blank">LibMTL: A Python Library for Multi-Task Learning</a>
-            </p>
-            <div class="authors"><p><strong>Baijiong Lin</strong> and Yu Zhang.</p></div>
-            <div class="conference"><p><em>Journal of Machine Learning Research</em> (<b>JMLR</b>), 2023.</p></div>
-            <a class="url" href="files/jmlr2023.pdf" target="_blank">[PDF]</a>
-            <a class="url" href="https://github.com/median-research-group/LibMTL" target="_blank">[Code]</a>
-            <a href="https://libmtl.readthedocs.io/en/latest/">[Docs]</a>
-            <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/median-research-group/LibMTL?color=red">
+      </div>
+      <div class="row section-item">
+        <div class="col col-wrapper">
+          Baijiong Lin
+            (<span class="zh-name">林百炅</span>)
+          is a third-year Ph.D. student in <a href="http://ait.hkust-gz.edu.cn/">Artificial Intelligence Thrust</a> at <a href="https://hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>, supervised by <a href="https://www.yingcong.me/">Prof. Ying-Cong Chen</a>. 
+          Previously, he worked with <a href="https://cse.sustech.edu.cn/faculty/~zhangy/">Prof. Yu Zhang</a> at <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology</a>.
+          His research interests include deep learning, machine learning, and AI4Science, especially in multi-task learning and large language models.
+        </div>
+      </div>
+    </div>
+    <!-- Bio -->
+
+    <!-- Research -->
+    <div class="sec-wrapper pub-wrapper" id="pub">
+
+      <div class="row section-head">
+        <div class="col-md-auto col-wrapper">
+          <div class="section-title">Publications</div>
+        </div>
+        <div class="col-md section-sub col-wrapper">
+          (* indicates equal contribution, <span class="representative">highlight</span> indicates representative papers)
+        </div>
+      </div>
+
+      <div class="row subsection-head">
+        <div class="col col-wrapper">
+          <div class="subsection-title">Journal Papers</div>
+        </div>
+      </div>
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/moml.png" alt="moml.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://doi.org/10.1016/j.artint.2024.104184">
+                Multi-Objective Meta-Learning
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://feiyang-ye.github.io/">Feiyang Ye</a>,
+              <me>Baijiong Lin</me>,
+              <a href="https://yuezhixiong.github.io/">Zhixiong Yue</a>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              and
+              <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor W. Tsang</a>
+            </div>
+            <div class="link">
+              <span class=""><a href="https://www.sciencedirect.com/journal/artificial-intelligence">Artificial Intelligence</a> (<b>AIJ</b>), <b>2024</b></span>
+            </div>
+            <div class="link">
+              <a href="files/aij2024.pdf">Paper</a> /
+              <a href="https://github.com/Baijiong-Lin/MOML">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-moml24" onclick="return false">bibtex</a>
+              <div class="highlight">Journal extension of <a class="highlight" href="https://proceedings.neurips.cc/paper/2021/hash/b23975176653284f1f7356ba5539cfcb-Abstract.html"><span class="highlight">MOML</span></a> (NeurIPS 2021)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-moml24">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{ye2024moml,
+  title={Multi-Objective Meta-Learning},
+  author={Ye, Feiyang and Lin, Baijiong and Yue, Zhixiong and Zhang, Yu and Tsang, Ivor},
+  journal={Artificial Intelligence},
+  volume={335},
+  pages={104184},
+  year={2024}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/LibMTL.png" alt="LibMTL.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://jmlr.org/papers/v24/22-0347.html">
+                LibMTL: A Python Library for Multi-Task Learning
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>
+              and
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>
+            </div>
+            <div class="link">
+              <span class=""><a href="https://www.jmlr.org/">Journal of Machine Learning Research</a> (<b>JMLR</b>), <b>2023</b></a></span>
+            </div>
+            <div class="link">
+              <a href="files/jmlr2023.pdf">Paper</a> /
+              <a href="https://github.com/median-research-group/LibMTL">Code</a>
+              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/median-research-group/LibMTL?color=red">
             <img alt="GitHub forks" src="https://img.shields.io/github/forks/median-research-group/LibMTL?color=blue">
-            <img src="https://img.shields.io/badge/Made%20With-Love-red.svg">
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/RLW.png" alt="RLW.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://openreview.net/forum?id=jjtFD8A1Wx" target="_blank">Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning</a>
-            </p>
-            <div class="authors"><p><strong>Baijiong Lin</strong>, Feiyang Ye, Yu Zhang, and Ivor W. Tsang.</p></div>
-            <div class="conference"><p><em>Transactions on Machine Learning Research</em> (<b>TMLR</b>), 2022.</p></div>
-            <a class="url" href="files/tmlr2022.pdf" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/fop.png" alt="fop.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://link.springer.com/article/10.1007/s11467-019-0935-y" target="_blank">Binary Neutron Stars Gravitational Wave Detection Based on Wavelet Packet Analysis And Convolutional Neural Networks</a>
-            </p>
-            <div class="authors"><p><strong>Baijiong Lin</strong>, Xiangru Li, and Woliang Yu.</p></div>
-            <div class="conference"><p><em>Frontiers of Physics</em> (<b>FOP</b>), 2020.</p></div>
-            <a class="url" href="files/fop2020.pdf" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    
-    <h5><b>Conference Papers</b></h5>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/RouterDC.png" alt="RouterDC.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="" target="_blank">RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models</a>
-            </p>
-            <div class="authors"><p>Shuhao Chen*, Weisen Jiang*, <strong>Baijiong Lin</strong>, James T. Kwok, and Yu Zhang.</p></div>
-            <div class="conference"><p><em>Conference on Neural Information Processing Systems</em> (<b>NeurIPS</b>), 2024.</p></div>
-            <a class="url" href="" target="_blank">[PDF]</a>
-            <a class="url" href="" target="_blank">[Code]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/FORUM.png" alt="FORUM.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://arxiv.org/abs/2401.09257" target="_blank">A First-Order Multi-Gradient Algorithm for Multi-Objective Bi-Level Optimization</a>
-            </p>
-            <div class="authors"><p>Feiyang Ye, <strong>Baijiong Lin</strong>, Xiaofeng Cao, Yu Zhang, and Ivor W. Tsang.</p></div>
-            <div class="conference"><p><em>European Conference on Artificial Intelligence</em> (<b>ECAI</b>), 2024.</p></div>
-            <a class="url" href="files/ecai2024.pdf" target="_blank">[PDF]</a>
-            <a class="url" href="https://github.com/Baijiong-Lin/FORUM" target="_blank">[Code]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/MTMamba.png" alt="MTMamba.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://arxiv.org/abs/2407.02228" target="_blank">MTMamba: Enhancing Multi-Task Dense Scene Understanding by Mamba-Based Decoders</a>
-            </p>
-            <div class="authors"><p><strong>Baijiong Lin</strong>, Weisen Jiang, Pengguang Chen, Yu Zhang, Shu Liu, and Ying-Cong Chen.</p></div>
-            <div class="conference"><p><em>European Conference on Computer Vision</em> (<b>ECCV</b>), 2024.</p></div>
-            <a class="url" href="files/eccv2024.pdf" target="_blank">[PDF]</a>
-            <a class="url" href="https://github.com/EnVision-Research/MTMamba" target="_blank">[Code]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/TAN.png" alt="TAN.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://openreview.net/forum?id=PpBs2iL0jv" target="_blank">Bridging Data Gaps in Diffusion Models with Adversarial Noise-Based Transfer Learning</a>
-            </p>
-            <div class="authors"><p>Xiyu Wang, <strong>Baijiong Lin</strong>, Daochang Liu, Ying-Cong Chen, and Chang Xu.</p></div>
-            <div class="conference"><p><em>International Conference on Machine Learning</em> (<b>ICML</b>), 2024. (<span style="color:red"><b>spotlight, acceptance rate 3.5%</b></span>) </p></div>
-            <a class="url" href="files/icml2024.pdf" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/E2RNAS.png" alt="E2RNAS.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://ieeexplore.ieee.org/document/9892654" target="_blank">Effective, Efficient and Robust Neural Architecture Search</a>
-            </p>
-            <div class="authors"><p>Zhixiong Yue, <strong>Baijiong Lin</strong>, Yu Zhang, and Christy Liang.</p></div>
-            <div class="conference"><p><em>International Joint Conference on Neural Networks</em> (<b>IJCNN</b>), 2022. (<span style="color:red"><b>oral</b></span>)</p></div>
-            <a class="url" href="files/ijcnn2022.pdf" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/moml.png" alt="moml.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://proceedings.neurips.cc/paper/2021/hash/b23975176653284f1f7356ba5539cfcb-Abstract.html" target="_blank">Multi-Objective Meta Learning</a>
-            </p>
-            <div class="authors"><p>Feiyang Ye*, <strong>Baijiong Lin*</strong>, Zhixiong Yue, Pengxin Guo, Qiao Xiao, and Yu Zhang.</p></div>
-            <div class="conference"><p><em>Conference on Neural Information Processing Systems</em> (<b>NeurIPS</b>), 2021.</p></div>
-            <a class="url" href="files/neurips2021.pdf" target="_blank">[PDF]</a>
-            <a class="url" href="files/neurips2021_supp.pdf" target="_blank">[Supplemental]</a>
-            <a class="url" href="https://github.com/Baijiong-Lin/MOML" target="_blank">[Code]</a>
-        </div>
-    </div>
-
-    <h5><b>Preprints</b></h5>    
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/MTMamba_plus.png" alt="MTMamba_plus.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://arxiv.org/abs/2408.15101" target="_blank">MTMamba++: Enhancing Multi-Task Dense Scene Understanding via Mamba-Based Decoders</a>
-            </p>
-            <div class="authors"><strong>Baijiong Lin</strong>, Weisen Jiang, Pengguang Chen, Shu Liu, and Ying-Cong Chen.</p></div>
-            <div class="conference"><p><em>arXiv preprint arXiv:2408.15101, 2024.</em></p></div>
-            <a class="url" href="https://arxiv.org/abs/2408.15101" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/PERU.png" alt="PERU.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://arxiv.org/abs/2310.01886v3" target="_blank">BYOM: Building Your Own Multi-Task Model For Free</a>
-            </p>
-            <div class="authors"><p>Weisen Jiang*, <strong>Baijiong Lin*</strong>, Han Shi, Yu Zhang, Zhenguo Li, and James T. Kwok.</p></div>
-            <div class="conference"><p><em>arXiv preprint arXiv:2310.01886, 2023.</em></p></div>
-            <a class="url" href="https://arxiv.org/abs/2310.01886v3" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-    <div class="publication-container">
-        <div class="teaser-container">
-            <img class="teaser" src="./images/pub/DBMTL.png" alt="DBMTL.png">
-        </div>
-        <div class="info-container">
-            <p class="title">
-                <a class="title_link" href="https://arxiv.org/abs/2308.12029v2" target="_blank">Dual-Balancing for Multi-Task Learning</a>
-            </p>
-            <div class="authors"><p><strong>Baijiong Lin</strong>, Weisen Jiang, Feiyang Ye, Yu Zhang, Pengguang Chen, Ying-Cong Chen, Shu Liu, and James T. Kwok.</p></div>
-            <div class="conference"><p><em>arXiv preprint arXiv:2308.12029, 2023.</em></p></div>
-            <a class="url" href="https://arxiv.org/abs/2308.12029v2" target="_blank">[PDF]</a>
-        </div>
-    </div>
-
-
-</section>
-
-<!-- Educations -->
-<section class="section experiences-section">
-    <div class="section-title">
-        Educations
-    </div>
-    <div class="item">
-
-        <div class="upper-row">
-            <div class="school">
-                Ph.D. in Artificial Intelligence, The Hong Kong University of Science and Technology (Guangzhou)
+            <!-- <img src="https://img.shields.io/badge/Made%20With-Love-red.svg"> -->
+             /
+              <a href="https://libmtl.readthedocs.io/en/latest/">Docs</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-libmtl" onclick="return false">bibtex</a>
             </div>
-            <div class="time">Sep. 2022 - Present</div>
+          </div>
         </div>
 
-        <div class="upper-row">
-            <div class="school">
-                Bachelor’s in Information and Computing Science, South China Normal University
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-libmtl">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{lin2023libmtl,
+  title={{LibMTL}: A {P}ython Library for Multi-Task Learning},
+  author={Baijiong Lin and Yu Zhang},
+  journal={Journal of Machine Learning Research},
+  volume={24},
+  number={209},
+  pages={1--7},
+  year={2023}
+}</code></pre>
             </div>
-            <div class="time">Sep. 2016 - Jun. 2020</div>
+          </div>
         </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/RLW.png" alt="RLW.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://openreview.net/forum?id=jjtFD8A1Wx">
+                Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>,
+              <a href="https://feiyang-ye.github.io/">Feiyang Ye</a>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              and
+              <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor W. Tsang</a>
+            </div>
+            <div class="link">
+              <span class=""><a href="https://www.jmlr.org/tmlr/">Transactions on Machine Learning Research</a> (<b>TMLR</b>), <b>2022</b></span>
+            </div>
+            <div class="link">
+              <a href="files/tmlr2022.pdf">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-rlw" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-rlw">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{linreasonable,
+  title={Reasonable Effectiveness of Random Weighting: A Litmus Test for Multi-Task Learning},
+  author={Lin, Baijiong and Ye, Feiyang and Zhang, Yu and Tsang, Ivor},
+  journal={Transactions on Machine Learning Research},
+  year={2022}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/fop.png" alt="fop.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://link.springer.com/article/10.1007/s11467-019-0935-y">
+                Binary Neutron Stars Gravitational Wave Detection Based on Wavelet Packet Analysis And Convolutional Neural Networks
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>,
+              <a href="https://www.scholat.com/xrli">Xiangru Li</a>,
+              and
+              <a href="">Woliang Yu</a>
+            </div>
+            <div class="link">
+              <span class=""><a href="https://link.springer.com/journal/11467">Frontiers of Physics</a> (<b>FOP</b>), <b>2020</b></span>
+            </div>
+            <div class="link">
+              <a href="files/fop2020.pdf">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-fop" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-fop">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{lin2020binary,
+  title={Binary neutron stars gravitational wave detection based on wavelet packet analysis and convolutional neural networks},
+  author={Lin, Bai-Jiong and Li, Xiang-Ru and Yu, Wo-Liang},
+  journal={Frontiers of Physics},
+  volume={15},
+  pages={1--7},
+  year={2020},
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+
+      <div class="row subsection-head">
+        <div class="col col-wrapper">
+          <div class="subsection-title">Conference Papers</div>
+        </div>
+      </div>
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/RouterDC.png" alt="RouterDC.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://arxiv.org/abs/2409.19886">
+                RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://shuhao02.github.io/cv/">Shuhao Chen</a><sup>*</sup>,
+              <a href="https://wayson-ust.github.io/">Weisen Jiang</a><sup>*</sup>,
+              <me>Baijiong Lin</me>,
+              <a href="https://cse.hkust.edu.hk/~jamesk/">James T. Kwok</a>,
+              and
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://neurips.cc/Conferences/2024">NeurIPS 2024</a></span> /
+              <a href="https://arxiv.org/abs/2409.19886">Paper</a> /
+              <a href="https://github.com/shuhao02/RouterDC">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-routerdc" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-routerdc">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{chen2024RouterDC,
+  title={{RouterDC}: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models},
+  author={Shuhao Chen, Weisen Jiang, Baijiong Lin, James T. Kwok, and Yu Zhang},
+  booktitle={Conference on Neural Information Processing Systems},
+  year={2024}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/FORUM.png" alt="FORUM.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240793">
+                First-Order Multi-Gradient Algorithm for Multi-Objective Bi-Level Optimization
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://feiyang-ye.github.io/">Feiyang Ye</a>,
+              <me>Baijiong Lin</me>,
+              <a href="https://xiaofengcaoml.github.io/">Xiaofeng Cao</a>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              and
+              <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang">Ivor W. Tsang</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://www.ecai2024.eu/">ECAI 2024</a></span> /
+              <a href="files/ecai2024.pdf">Paper</a> /
+              <a href="https://github.com/Baijiong-Lin/FORUM">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-forum" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-forum">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{ye2024forum,
+  title={A First-Order Multi-Gradient Algorithm for Multi-Objective Bi-Level Optimization},
+  author={Ye, Feiyang and Lin, Baijiong and Cao, Xiaofeng and Zhang, Yu and Tsang, Ivor},
+  booktitle={European Conference on Artificial Intelligence},
+  year={2024}
+}
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/MTMamba.png" alt="MTMamba.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8907_ECCV_2024_paper.php">
+                MTMamba: Enhancing Multi-Task Dense Scene Understanding by Mamba-Based Decoders
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>,
+              <a href="https://wayson-ust.github.io/">Weisen Jiang</a>,
+              <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ">Pengguang Chen</a>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              <a href="https://shuliu1993.github.io/">Shu Liu</a>,
+              and
+              <a href="https://www.yingcong.me/">Ying-Cong Chen</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://eccv2024.ecva.net/">ECCV 2024</a></span> /
+              <a href="files/eccv2024.pdf">Paper</a> /
+              <a href="https://github.com/EnVision-Research/MTMamba">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-mtmamba" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-mtmamba">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{lin2024mtmamba,
+  title={{MTMamba}: Enhancing Multi-Task Dense Scene Understanding by Mamba-Based Decoders},
+  author={Lin, Baijiong and Jiang, Weisen and Chen, Pengguang and Zhang, Yu and Liu, Shu and Chen, Ying-Cong},
+  booktitle={European Conference on Computer Vision},
+  year={2024}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+                <img src="./images/pub/TAN.png" alt="TAN.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://openreview.net/forum?id=PpBs2iL0jv">
+                Bridging Data Gaps in Diffusion Models with Adversarial Noise-Based Transfer Learning
+              </a>
+            </div>
+            <div class="authors">
+              <a href="">Xiyu Wang</a>,
+              <me>Baijiong Lin</me>,
+              <a href="https://daochang.site/">Daochang Liu</a>,
+              <a href="https://www.yingcong.me/">Ying-Cong Chen</a>
+              and
+              <a href="http://changxu.xyz/">Chang Xu</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://icml.cc/Conferences/2024">ICML 2024</a></span> /
+              <a href="files/icml2024.pdf">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-tan" onclick="return false">bibtex</a>
+              <div class="highlight">Spotlight, acceptance rate 3.5%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-tan">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{wang2024bridging,
+  title={Bridging Data Gaps in Diffusion Models with Adversarial Noise-Based Transfer Learning},
+  author={Wang, Xiyu and Lin, Baijiong and Liu, Daochang and Chen, Ying-Cong and Xu, Chang},
+  booktitle={International Conference on Machine Learning},
+  year={2024}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/E2RNAS.png" alt="E2RNAS.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://ieeexplore.ieee.org/document/9892654">
+                Effective, Efficient and Robust Neural Architecture Search
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://yuezhixiong.github.io/">Zhixiong Yue</a>,
+              <me>Baijiong Lin</me>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              and
+              <a href="https://profiles.uts.edu.au/Jie.Liang">Christy Liang</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://wcci2022.org/call-for-papers/">IJCNN 2022</a></span> /
+              <a href="files/ijcnn2022.pdf">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-e2rnas" onclick="return false">bibtex</a>
+            </div>
+            <div class="highlight">Oral Presentation</div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-diffusebot">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{yue2022effective,
+  title={Effective, efficient and robust neural architecture search},
+  author={Yue, Zhixiong and Lin, Baijiong and Zhang, Yu and Liang, Christy},
+  booktitle={International Joint Conference on Neural Networks},
+  year={2022}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/moml.png" alt="moml.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://proceedings.neurips.cc/paper/2021/hash/b23975176653284f1f7356ba5539cfcb-Abstract.html">
+                Multi-Objective Meta Learning
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://feiyang-ye.github.io/">Feiyang Ye</a><sup>*</sup>,
+              <me>Baijiong Lin</me><sup>*</sup>,
+              <a href="https://yuezhixiong.github.io/">Zhixiong Yue</a>,
+              <a href="https://pengxin-guo.github.io/">Pengxin Guo</a>,
+              <a href="https://scholar.google.com/citations?user=ypZ_YwoAAAAJ">Qiao Xiao</a>,
+              and
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://neurips.cc/Conferences/2021">NeurIPS 2021</a></span> /
+              <a href="files/neurips2021.pdf">Paper</a> /
+              <a href="files/neurips2021_supp.pdf">Appendix</a> /
+              <a href="https://github.com/Baijiong-Lin/MOML">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-moml21" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-moml21">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@inproceedings{ye2021moml,
+  title={Multi-Objective Meta Learning},
+  author={Ye, Feiyang and Lin, Baijiong and Yue, Zhixiong and Guo, Pengxin and Xiao, Qiao and Zhang, Yu},
+  booktitle={Conference on Neural Information Processing Systems},
+  year={2021}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+      <div class="row subsection-head">
+        <div class="col col-wrapper">
+          <div class="subsection-title">Preprints</div>
+        </div>
+      </div>
+
+      <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/MTMamba_plus.png" alt="MTMamba_plus.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://arxiv.org/abs/2408.15101">
+                MTMamba++: Enhancing Multi-Task Dense Scene Understanding via Mamba-Based Decoders
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>,
+              <a href="https://wayson-ust.github.io/">Weisen Jiang</a>,
+              <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ">Pengguang Chen</a>,
+              <a href="https://shuliu1993.github.io/">Shu Liu</a>,
+              and
+              <a href="https://www.yingcong.me/">Ying-Cong Chen</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://arxiv.org/abs/2408.15101">arXiv:2408.15101</a></span> /
+              <a href="https://arxiv.org/abs/2408.15101">Paper</a> /
+              <a href="https://github.com/EnVision-Research/MTMamba">Code</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-mtmambaplus" onclick="return false">bibtex</a>
+              <div class="highlight">Journal extension of <a class="highlight" href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8907_ECCV_2024_paper.php"><span class="highlight">MTMamba</span></a> (ECCV 2024)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-mtmambaplus">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{lin2024mtmambaplus,
+  title={{MTMamba++}: Enhancing Multi-Task Dense Scene Understanding via Mamba-Based Decoders},
+  author={Lin, Baijiong and Jiang, Weisen and Chen, Pengguang and Liu, Shu and Chen, Ying-Cong},
+  journal={arXiv preprint arXiv:2408.15101},
+  year={2024}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+    <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/PERU.png" alt="PERU.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://arxiv.org/abs/2310.01886">
+                BYOM: Building Your Own Multi-Task Model For Free
+              </a>
+            </div>
+            <div class="authors">
+              <a href="https://wayson-ust.github.io/">Weisen Jiang</a><sup>*</sup>,
+              <me>Baijiong Lin</me><sup>*</sup>,
+              <a href="https://scholar.google.com/citations?user=Johp_14AAAAJ">Han Shi</a>,
+              <a href="https://yuzhanghk.github.io/">Yu Zhang</a>,
+              <a href="https://scholar.google.com/citations?user=XboZC1AAAAAJ">Zhenguo Li</a>,
+              and
+              <a href="https://cse.hkust.edu.hk/~jamesk/">James T. Kwok</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://arxiv.org/abs/2310.01886">arXiv:2310.01886</a></span> /
+              <a href="https://arxiv.org/abs/2310.01886">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-byom" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-byom">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{jiang2023byom,
+  title={{BYOM}: Building Your Own Multi-Task Model For Free},
+  author={Jiang, Weisen and Lin, Baijiong and Shi, Han and Zhang, Yu and Li, Zhenguo and Kwok, James},
+  journal={arXiv preprint arXiv:2310.01886},
+  year={2023}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
+
+    <!-- begin -->
+      <div class="representative section-item">
+        <div class="row align-items-center">
+          <div class="col-xs-12 col-md-auto col-wrapper">
+            <div class="figure">
+              <img src="./images/pub/DBMTL.png" alt="DBMTL.png">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md col-wrapper">
+            <div class="title">
+              <a href="https://arxiv.org/abs/2308.12029">
+                Dual-Balancing for Multi-Task Learning
+              </a>
+            </div>
+            <div class="authors">
+              <me>Baijiong Lin</me>,
+              <a href="https://wayson-ust.github.io/">Weisen Jiang</a>,
+              <a href="https://feiyang-ye.github.io/">Feiyang Ye</a>,
+              <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ">Pengguang Chen</a>,
+              <a href="https://www.yingcong.me/">Ying-Cong Chen</a>,
+              <a href="https://shuliu1993.github.io/">Shu Liu</a>,
+              and 
+              <a href="https://cse.hkust.edu.hk/~jamesk/">James T. Kwok</a>
+            </div>
+            <div class="link">
+              <span class="venue"><a href="https://arxiv.org/abs/2308.12029">arXiv:2308.12029</a></span> /
+              <a href="https://arxiv.org/abs/2308.12029">Paper</a> /
+              <a data-bs-toggle="collapse" href="#bibtex-dual" onclick="return false">bibtex</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- bibtex -->
+        <div class="collapse" id="bibtex-dual">
+          <div class="row align-items-center">
+            <div class="col col-wrapper">
+              <pre class="snippet">
+<code>@article{lin2023scale,
+  title={Dual-Balancing for Multi-Task Learning},
+  author={Lin, Baijiong and Jiang, Weisen and Ye, Feiyang and Zhang, Yu and Chen, Pengguang and Chen, Ying-Cong and Liu, Shu and Kwok, James T.},
+  journal={arXiv preprint arXiv:2308.12029},
+  year={2023}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end -->
 
     </div>
-</section>
+    <!-- Research -->
 
-<!-- Experiences -->
-<section class="section experiences-section">
-    <div class="section-title">
-        Experiences
-    </div>
-    <div class="item">
+    <!-- Collapse -->
+    <div class="show" id="more-content">
+    <!-- <div class="collapse" id="more-content"> -->
 
-        <div class="upper-row">
-            <div class="company">
-                The Hong Kong University of Science and Technology
+      <!-- Education -->
+      <div class="sec-wrapper exp-wrapper" id="edu">
+
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <div class="section-title">Education</div>
+          </div>
+        </div>
+
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="https://www.hkust-gz.edu.cn/">The Hong Kong University of Science and Technology (Guangzhou)</a>
             </div>
-            <div class="location"> Hong Kong, China</div>
-            <div class="time">Sep. 2024 - Present</div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Ph.D. in Artificial Intelligence
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Sep. 2022 - Present
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Guangzhou, China
+            </div>
+          </div>
         </div>
-        <div class="below-row">
-            <div class="role">Visiting Student, supervised by <a href="https://cse.hkust.edu.hk/~jhc/" target="_blank">Prof. Hao Chen</a></div>
+        <!-- end -->
+
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="http://english.scnu.edu.cn/">South China Normal University</a>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              B.Sc. in Information and Computing Science
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Sep. 2016 - Jun. 2020
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Guangzhou, China
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+
+      </div>
+      <!-- Education -->
+
+      <!-- Experience -->
+      <div class="sec-wrapper exp-wrapper" id="exp">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <div class="section-title">Experiences</div>
+          </div>
         </div>
 
-        <div class="upper-row">
-            <div class="company">
-                SmartMore Corporation Limited
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="https://hkust.edu.hk/">The Hong Kong University of Science and Technology</a>
             </div>
-            <div class="location"> Shenzhen, China</div>
-            <div class="time">Apr. 2022 - Sep. 2022</div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Visiting Student | Supervised by
+              <a href="https://cse.hkust.edu.hk/~jhc/" target="_blank">Prof. Hao Chen</a>
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Sep. 2024 - Present
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Hongkong, China
+            </div>
+          </div>
         </div>
-        <div class="below-row">
-            <div class="role">Research Intern, supervised by <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ" target="_blank">Dr. Pengguang Chen</a> and <a href="http://shuliu.me/" target="_blank">Dr. Shu Liu</a></div>
-            <div class="role">Topic: hyperparameter optimization. </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="https://global.smartmore.com/">SmartMore Corporation Limited</a>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Research Intern | Supervised by <a href="https://scholar.google.com/citations?user=lMnVrgIAAAAJ" target="_blank">Dr. Pengguang Chen</a> and <a href="https://shuliu1993.github.io/" target="_blank">Dr. Shu Liu</a>
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Apr. 2022 - Sep. 2022
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Shenzhen, China
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="https://www.sustech.edu.cn/en/">Southern University of Science and Technology</a>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Research Assistant | Supervised by <a href="https://cse.sustech.edu.cn/faculty/~zhangy/" target="_blank">Prof. Yu Zhang</a>
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Jul. 2020 - Mar. 2022
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Shenzhen, China
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+
+        <!-- begin -->
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col col-wrapper title">
+              <a href="http://english.scnu.edu.cn/">South China Normal University</a>
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Research Intern | Supervised by <a href="http://www.scholat.com/xrli" target="_blank">Prof. Xiangru Li</a>
+            </div>
+            <div class="col-md-3 col-wrapper time">
+              Mar. 2017 - Jan. 2020
+            </div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col col-wrapper location">
+              Guangzhou, China
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
+      <!-- Experience -->
+
+    </div>
+    <!-- Collapse -->
+
+    <div class="sec-wrapper exp-wrapper" id="award">
+        <div class="row section-head">
+          <div class="col col-wrapper">
+            <div class="section-title">Awards</div>
+          </div>
         </div>
 
-        <div class="upper-row">
-            <div class="company">
-                 Southern University of Science and Technology
+        <div class="section-item">
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Outstanding Undergraduate Thesis Award, South China Normal University
             </div>
-            <div class="location">Shenzhen, China</div>
-            <div class="time">Jul. 2020 - Mar. 2022</div>
-        </div>
-        <div class="below-row">
-            <div class="role">Research Assistant, supervised by <a href="https://cse.sustech.edu.cn/faculty/~zhangy/" target="_blank">Prof. Yu Zhang</a></div>
-            <div class="role">Topic: multi-task learning, meta learning, and transfer learning. </div>
-        </div>
+            <div class="col-md-3 col-wrapper time">
+              2020
+            </div>
+          </div>
 
-        <div class="upper-row">
-            <div class="company">
-                 South China Normal University
+          <div class="row align-items-center">
+            <div class="col-md-9 col-wrapper info">
+              Outstanding Undergraduate Award (about Top 1%), South China Normal University
             </div>
-            <div class="location">Guangzhou, China</div>
-            <div class="time">Mar. 2017 - Jan. 2020</div>
-        </div>
-        <div class="below-row">
-            <div class="role">Research Intern, supervised by <a href="http://www.scholat.com/xrli" target="_blank">Prof. Xiangru Li</a></div>
-            <div class="role">Topic: gravitational wave data analysis based on deep learning. </div>
+            <div class="col-md-3 col-wrapper time">
+              2020
+            </div>
+          </div>
         </div>
     </div>
-</section>
 
-<!-- Services -->
-<!-- <section class="section awards-section"> -->
-    <!-- <div class="section-title"> -->
-        <!-- Services -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-        <!-- <div class="upper-row"> -->
-            <!-- <div class="name"> -->
-            <!-- Conference Reviewer: -->
-                <!-- <ul> -->
-                  <!-- <li>International Conference on Machine Learning (<b>ICML</b>): <a href="https://icml.cc/Conferences/2022/Reviewers">2022</a>, 2024 </li> -->
-                  <!-- <li>Neural Information Processing Systems (<b>NeurIPS</b>): <a href="https://neurips.cc/Conferences/2022/ProgramCommittee">2022</a>, <a href="https://neurips.cc/Conferences/2023/ProgramCommittee">2023</a> </li> -->
-                  <!-- <li>International Conference on Learning Representations (<b>ICLR</b>): 2024 </li> -->
-                  <!-- <li>Computer Vision and Pattern Recognition (<b>CVPR</b>): 2024 </li> -->
-                  <!-- <li>European Conference on Computer Vision (<b>ECCV</b>): 2024 </li> -->
-                  <!-- <li>SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD</b>): 2023 </li> -->
-                  <!-- <li>AAAI Conference on Artificial Intelligence (<b>AAAI</b>): 2023, 2024 </li> -->
-                  <!-- <li>ACM International Conference on Multimedia (<b>MM</b>): 2022 </li>  -->
-                  <!-- <li>Conference on Uncertainty in Artificial Intelligence (<b>UAI</b>): 2023 </li> -->
-                  <!-- <li>European Conference on Artificial Intelligence (<b>ECAI</b>): <a href="https://ecai2023.eu/reviewer">2023</a> </li> -->
-                  <!-- <li>European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (<b>ECML/PKDD</b>): 2023 </li> -->
-                  <!-- <li>British Machine Vision Conference (<b>BMVC</b>): 2023 </li> -->
-                  <!-- <li>International Conference on Artificial Intelligence and Statistics (<b>AISTATS</b>): <a href="http://aistats.org/aistats2023/reviewers.html">2023</a>, 2024 </li> -->
-                  <!-- <li>Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD</b>): <a href="https://pakdd2023.org/pc/">2023</a> </li> -->
-                  <!-- <li>International Conference on Automated Machine Learning (<b>AutoML</b>): 2023 </li> -->
-                  <!-- <li>International Joint Conference on Neural Networks (<b>IJCNN</b>): 2022 </li> -->
-                <!-- </ul> -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-    <!-- <div class="item"> -->
-        <!-- <div class="upper-row"> -->
-            <!-- <div class="name"> -->
-                <!-- Journal Reviewer: Transactions on Machine Learning Research (<b>TMLR</b>) -->
-            <!-- </div> -->
-        <!-- </div> -->
-    <!-- </div> -->
-<!-- </section> -->
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
 
-<!-- Awards -->
-<section class="section awards-section">
-    <div class="section-title">
-        Awards
-    </div>
-    <div class="item">
-        <div class="upper-row">
-            <div class="name">
-                <p>Outstanding Undergraduate Thesis Award, South China Normal University</p>
-            </div>
-            <div class="time">2020</div>
-        </div>
-    </div>
+    <!-- Footer -->
+    <footer class="citation col-wrapper">
+      <div class="text-muted">
+        This homepage template was borrowed from <a href="https://pingchuan.ma/">Pingchuang Ma</a>.
+      </div>
+      <div class="text-muted">
+        Copyright &copy; <span id="year"></span> Baijiong Lin
+        <i class="bi bi-dot"></i>
+        Last updated: October 25, 2024.
+      </div>
+    </footer>
 
-    <div class="item">
-        <div class="upper-row">
-            <div class="name">
-                <p>Outstanding Undergraduate Award (about Top 1%), South China Normal University</p>
-            </div>
-            <div class="time">2020</div>
-        </div>
-    </div>
-</section>
+  </div>
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
+</body>
 
-<footer class="footer">
-    <div class="text-center">
-        <small id="copyright">
-            Copyright &copy; Baijiong Lin. The website template was borrowed from &nbsp;<a href="https://kaichen1998.github.io/">Kai Chen</a>. Last updated: September 26, 2024.
-        </small>
-    </div>
-</footer>
+<script defer src="js/script.js"></script>
 
-
-</body></html>
+</html>
