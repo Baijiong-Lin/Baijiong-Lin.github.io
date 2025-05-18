@@ -44,9 +44,10 @@ body {
   font-family: "Lato", "Helvetica Neue", Ubuntu, Arial, PingFang, SimHei, sans-serif;
   font-size: var(--font-size);
   line-height: var(--line-height);
-  color: black;
+  color: #333; /* 更改默认文字颜色为深灰色 */
   font-weight: normal;
   background: white;
+  padding-top: 20px;
 }
 
 .blockquote {
@@ -56,7 +57,8 @@ body {
 
 body .container,
 body .container-fluid {
-  max-width: 768px;
+  max-width: 810px;
+  padding-top: 10px;
 }
 
 body .row {
@@ -73,7 +75,7 @@ b.zh {
 a {
   color: var(--cardinal);
   text-decoration: none;
-  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease;
 }
 
 a:hover {
@@ -88,30 +90,56 @@ a:hover {
 
 .section-item {
   margin-top: 10px;
+  margin-bottom: 15px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .section-head {
   margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .subsection-head {
-  margin-top: 15px;
-  margin-bottom: -10px;
-/*  padding-bottom: -50px;*/
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .section-title {
-  font-weight: normal;
-  font-size: var(--section-title-font-size);
+  font-weight: 600;
+  font-size: 22px;
   line-height: var(--line-height);
   display: inline-block;
+  color: #333;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--cardinal);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.section-title:hover::after {
+  width: 60px;
 }
 
 .subsection-title {
-  font-weight: normal;
-  font-size: var(--subsection-title-font-size);
+  font-weight: 600;
+  font-size: 17px;
   line-height: var(--line-height);
   display: inline-block;
+  color: #555;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
 }
 
 .col-wrapper {
@@ -120,7 +148,22 @@ a:hover {
 }
 
 .sec-wrapper {
-  margin-top: 30px;
+  margin-top: 35px;
+  scroll-margin-top: 80px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+/* 为所有部分添加微妙的分隔线 */
+.sec-wrapper:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background-color: var(--very-light-gray);
 }
 
 .section-sub {
@@ -130,8 +173,15 @@ a:hover {
 }
 
 .representative {
-  background-color: var(--very-light-orange);
-  border-radius: 2px;
+  background-color: #fff2f4 !important;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.representative:hover {
+  background-color: #ffe4e8 !important;
+  box-shadow: 0 2px 8px rgba(117, 0, 20, 0.1);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 767.98px) {
@@ -238,8 +288,16 @@ a:hover {
 
 .pub-wrapper .section-item {
   margin-top: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 12px 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.3s ease;
+}
+
+.pub-wrapper .section-item:hover {
+  background-color: #eeeeee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
 }
 
 .pub-wrapper .title a {
@@ -377,4 +435,298 @@ a:hover {
   line-height: var(--code-line-height);
   margin-top: 40px;
   margin-bottom: 30px;
+}
+
+/*------------------
+ * News
+ *------------------*/
+
+.news-wrapper .news-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.news-wrapper .news-list li {
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  padding: 8px 12px 8px 30px;
+  border-radius: 6px;
+  border-left: 3px solid var(--very-light-gray);
+  transition: background-color 0.2s ease, transform 0.1s ease, border-left-color 0.3s ease;
+}
+
+.news-wrapper .news-list li::before {
+  content: "\F4B0";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: var(--cardinal);
+  font-size: 14px;
+}
+
+.news-wrapper .news-date {
+  font-weight: bold;
+  color: var(--cardinal);
+  margin-right: 8px;
+}
+
+.news-wrapper .news-list li:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left-color: var(--cardinal);
+  transform: translateX(2px);
+}
+
+.news-wrapper .news-list li:hover::before {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.news-wrapper .news-list li a {
+  color: var(--cardinal);
+  font-weight: normal;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+/*------------------
+ * Navigation
+ *------------------*/
+
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar .container-fluid {
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--cardinal) !important;
+}
+
+.navbar .nav-link {
+  color: #333;
+  margin: 0 5px;
+  transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--cardinal);
+}
+
+.navbar .nav-link.active {
+  color: var(--cardinal);
+  font-weight: bold;
+}
+
+.navbar-toggler {
+  border-color: var(--light-gray);
+}
+
+@media (max-width: 992px) {
+  .navbar .nav-item {
+    padding: 5px 0;
+  }
+  
+  .navbar-collapse {
+    padding: 10px 0;
+  }
+}
+
+/* 移动设备优化 */
+@media (max-width: 767.98px) {
+  /* 导航栏移动端优化 */
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 12px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 5px;
+  }
+  
+  .navbar .nav-link {
+    padding: 8px 10px;
+    border-radius: 4px;
+    margin: 2px 0;
+  }
+  
+  .navbar .nav-link:hover,
+  .navbar .nav-link.active {
+    background-color: rgba(117, 0, 20, 0.05);
+  }
+
+  /* 调整头像在移动设备上的大小和居中 */
+  .home-wrapper .picture img {
+    width: 150px; /* 减小头像大小 */
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  /* 调整个人信息在移动设备上的对齐方式 */
+  .home-wrapper .description {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* 增大移动设备上的文字大小 */
+  body {
+    font-size: var(--mobile-font-size);
+    line-height: var(--mobile-line-height);
+  }
+  
+  /* 调整 section 标题在移动设备上的大小 */
+  .section-title {
+    font-size: var(--mobile-section-title-font-size);
+  }
+  
+  /* 调整 subsection 标题在移动设备上的大小 */
+  .subsection-title {
+    font-size: var(--mobile-subsection-title-font-size);
+  }
+  
+  /* 调整发表物列表的边距和内边距 */
+  .pub-wrapper .section-item {
+    padding: 15px 12px; /* 增加垂直内边距 */
+  }
+  
+  /* 优化新闻列表在移动设备上的显示 */
+  .news-wrapper .news-list li {
+    padding: 10px 12px 10px 30px; /* 增加内边距 */
+  }
+  
+  /* 在小屏幕上简化页脚 */
+  footer.citation {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  
+  /* 调整各部分之间的间距 */
+  .sec-wrapper {
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  /* 调整 section 标题和内容的间距 */
+  .section-title {
+    margin-bottom: 12px;
+  }
+  
+  /* 防止长内容溢出 */
+  pre.snippet {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* 确保长链接可以换行 */
+  a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  /* 修复 bibtex 代码框的溢出问题 */
+  pre.snippet code {
+    font-size: 11px;
+    white-space: pre-wrap;
+  }
+  
+  /* 优化论文标题在移动设备上的显示 */
+  .pub-wrapper .title {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+  
+  /* 确保文章信息不会溢出 */
+  .pub-wrapper .authors, 
+  .pub-wrapper .link {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  
+  /* 优化剪贴板按钮在移动设备上的位置 */
+  .snippet .btn {
+    top: 2px;
+    right: 2px;
+    padding: 0 3px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  
+  /* 避免过长的表格在移动设备上溢出 */
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* 确保论文卡片边距在移动设备上更紧凑 */
+  .pub-wrapper .section-item {
+    margin-left: -5px;
+    margin-right: -5px;
+    width: calc(100% + 10px);
+  }
+}
+
+/* 触摸友好的交互优化 */
+@media (hover: none) and (pointer: coarse) {
+  /* 增加触摸目标尺寸 */
+  .nav-link, 
+  .social a.link, 
+  .pub-wrapper .title a,
+  .pub-wrapper .link a,
+  .news-wrapper .news-list li a {
+    padding: 8px 5px;
+    display: inline-block;
+  }
+  
+  /* 确保按钮有足够的触摸面积 */
+  button, 
+  .btn, 
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* 移除悬停态，改为活动态 */
+  .section-item:active,
+  .news-list li:active,
+  .representative:active {
+    transform: translateY(1px);
+    transition: transform 0.1s ease;
+  }
+  
+  /* 确保折叠元素的触发区域足够大 */
+  [data-bs-toggle="collapse"] {
+    padding: 8px 5px;
+  }
+}
+
+/* 旋转设备时保持一致的体验 */
+@media screen and (orientation: portrait) {
+  /* 在竖屏模式下优化顶部间距 */
+  body {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 767.98px) {
+  /* 在横屏模式下调整头像大小 */
+  .home-wrapper .picture img {
+    width: 120px;
+    margin-right: 0;
+  }
+  
+  /* 调整导航栏在横屏手机上的显示 */
+  .navbar-collapse {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
 }

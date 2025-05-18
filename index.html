@@ -6,7 +6,10 @@
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover">
+  <meta name="theme-color" content="#750014">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <meta name="description" content="Baijiong Lin is a Ph.D. student at HKUST(GZ).">
   <meta name="author" content="Baijiong Lin">
@@ -38,6 +41,41 @@
 </head>
 
 <body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#home">Baijiong Lin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bio">Biography</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pub">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#edu">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#exp">Experiences</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#award">Awards</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
   <div class="container-fluid">
 
@@ -87,6 +125,42 @@
     </div>
     <!-- Bio -->
 
+    <!-- News -->
+    <div class="sec-wrapper news-wrapper" id="news">
+      <div class="row section-head">
+        <div class="col col-wrapper">
+          <div class="section-title">News</div>
+        </div>
+      </div>
+      <div class="row section-item">
+        <div class="col col-wrapper">
+          <ul class="news-list">
+            <li>
+              <span class="news-date">[May 2025]</span>
+              Our paper "<a href="https://arxiv.org/abs/2505.06274">PARM</a>" has been accepted by ICML 2025.
+            </li>
+            <li>
+              <span class="news-date">[Apr 2025]</span>
+              Our tutorial proposal has been accepted by IJCAI 2025.
+            </li>
+            <li>
+              <span class="news-date">[Mar 2025]</span>
+              Our survey "<a href="https://arxiv.org/abs/2501.10945">Gradient-Based Multi-Objective Deep Learning</a>" is available on arXiv.
+            </li>
+            <li>
+              <span class="news-date">[Jul 2024]</span>
+              Our paper "<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8907_ECCV_2024_paper.php">MTMamba</a>" has been accepted by ECCV 2024.
+            </li>
+            <!-- <li>
+              <span class="news-date">[July 2023]</span>
+              Our paper "<a href="https://jmlr.org/papers/v24/22-0347.html">LibMTL</a>" has been published in JMLR.
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- News -->
+
     <!-- Research -->
     <div class="sec-wrapper pub-wrapper" id="pub">
 
@@ -108,11 +182,6 @@
       <!-- begin -->
       <div class="section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/moml.png" alt="moml.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://doi.org/10.1016/j.artint.2024.104184">
@@ -162,11 +231,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/LibMTL.png" alt="LibMTL.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://jmlr.org/papers/v24/22-0347.html">
@@ -217,11 +281,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/RLW.png" alt="RLW.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://openreview.net/forum?id=jjtFD8A1Wx">
@@ -265,11 +324,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/fop.png" alt="fop.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://link.springer.com/article/10.1007/s11467-019-0935-y">
@@ -321,14 +375,9 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/PARM.png" alt="PARM.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
-              <a href="">
+              <a href="https://arxiv.org/abs/2505.06274">
                 PARM: Multi-Objective Test-Time Alignment via Preference-Aware Autoregressive Reward Model
               </a>
             </div>
@@ -342,8 +391,8 @@
             </div>
             <div class="link">
               <span class="venue"><a href="https://icml.cc/Conferences/2025">ICML 2025</a></span> /
-              <a href="">Paper</a> /
-              <a href="">Code</a> /
+              <a href="https://arxiv.org/abs/2505.06274">Paper</a> /
+              <a href="https://github.com/Baijiong-Lin/PARM">Code</a> /
               <a data-bs-toggle="collapse" href="#bibtex-parm" onclick="return false">bibtex</a>
             </div>
           </div>
@@ -370,11 +419,6 @@
       <!-- begin -->
       <div class="section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/RouterDC.png" alt="RouterDC.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://arxiv.org/abs/2409.19886">
@@ -419,11 +463,6 @@
       <!-- begin -->
       <div class="section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/FORUM.png" alt="FORUM.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA240793">
@@ -468,11 +507,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/MTMamba.png" alt="MTMamba.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/8907_ECCV_2024_paper.php">
@@ -517,11 +551,6 @@
       <!-- begin -->
       <div class="section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-                <img src="./images/pub/TAN.png" alt="TAN.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://openreview.net/forum?id=PpBs2iL0jv">
@@ -565,11 +594,6 @@
       <!-- begin -->
       <div class="section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/E2RNAS.png" alt="E2RNAS.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://ieeexplore.ieee.org/document/9892654">
@@ -612,11 +636,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/moml.png" alt="moml.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://proceedings.neurips.cc/paper/2021/hash/b23975176653284f1f7356ba5539cfcb-Abstract.html">
@@ -668,11 +687,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/MODL.png" alt="MODL.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://arxiv.org/abs/2501.10945">
@@ -719,11 +733,6 @@
       <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/MTMamba_plus.png" alt="MTMamba_plus.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://arxiv.org/abs/2408.15101">
@@ -768,11 +777,6 @@
     <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/PERU.png" alt="PERU.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://arxiv.org/abs/2310.01886">
@@ -816,11 +820,6 @@
     <!-- begin -->
       <div class="representative section-item">
         <div class="row align-items-center">
-          <div class="col-xs-12 col-md-auto col-wrapper">
-            <div class="figure">
-              <img src="./images/pub/DBMTL.png" alt="DBMTL.png">
-            </div>
-          </div>
           <div class="col-xs-12 col-md col-wrapper">
             <div class="title">
               <a href="https://arxiv.org/abs/2308.12029">
@@ -1061,7 +1060,7 @@
         </div>
     </div>
 
-    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script>
+    <!-- <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=250&t=tt&d=LX8bPL4CQx1zpRZduJsDNo8vbK0lFhm1jqeS1ItBO2M&co=2d78ad&ct=ffffff&cmo=3acc3a&cmn=ff5353'></script> -->
 
     <!-- Footer -->
     <footer class="citation col-wrapper">
@@ -1071,7 +1070,7 @@
       <div class="text-muted">
         Copyright &copy; <span id="year"></span> Baijiong Lin
         <i class="bi bi-dot"></i>
-        Last updated: May 01, 2025.
+        Last updated: May 18, 2025.
       </div>
     </footer>
 
@@ -1080,5 +1079,46 @@
 </body>
 
 <script defer src="js/script.js"></script>
+<script>
+// 导航功能
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.sec-wrapper');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  
+  // 添加平滑滚动处理
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      window.scrollTo({
+        top: targetSection.offsetTop - 70,
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  window.addEventListener('scroll', updateNav);
+  window.addEventListener('load', updateNav);
+  
+  function updateNav() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 100) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('active');
+      }
+    });
+  }
+});
+</script>
 
 </html>
