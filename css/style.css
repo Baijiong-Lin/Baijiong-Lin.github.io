@@ -730,3 +730,59 @@ a:hover {
     overflow-y: auto;
   }
 }
+
+/* Talk section styles - matching news section */
+.talk-wrapper .news-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.talk-wrapper .news-list li {
+  position: relative;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  padding: 10px 12px 10px 30px;
+  border-radius: 6px;
+  border-left: 3px solid var(--very-light-gray);
+  transition: background-color 0.2s ease, transform 0.1s ease, border-left-color 0.3s ease;
+}
+
+.talk-wrapper .news-list li::before {
+  content: "\F490";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 8px;
+  top: 10px;
+  color: var(--cardinal);
+  font-size: 14px;
+}
+
+.talk-wrapper .news-date {
+  font-weight: bold;
+  color: var(--cardinal);
+  margin-right: 8px;
+}
+
+.talk-wrapper .news-list li:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-left-color: var(--cardinal);
+  transform: translateX(2px);
+}
+
+.talk-wrapper .news-list li:hover::before {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+.talk-wrapper .news-list li a {
+  color: var(--cardinal);
+  font-weight: normal;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+/* Enhanced typography for talk content */
+.talk-wrapper .news-list li {
+  font-size: 14px;
+  color: #444;
+}
